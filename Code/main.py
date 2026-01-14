@@ -82,9 +82,13 @@ def SoundRemover() -> None:
     else:
 
         Banner(Fore.LIGHTGREEN_EX, "Path not found", "Please follow the instructions down below!\n\n")
-        tf_path = input(f"{Fore.RED}1. Open your Steam client and go to your Library.\n2. Right-click the game you want to check.\n3. Select Properties from the menu, then click on the Installed Files tab\n4. Then click on the \"Browse\" button\n5. Then the file manager will appear, copy the path from the top line and paste it here\n\n{Fore.WHITE}>>> ")
-        system("cls")
-        SoundRemover()
+        tf_path = input(f"{Fore.RED}1. Open your Steam client and go to your Library.\n2. Right-click the game you want to check.\n3. Select Properties from the menu, then click on the Installed Files tab\n4. Then click on the \"Browse\" button\n5. Then the file manager will appear, copy the path from the top line and paste it here\n6. Then go by this path: {EXTRA_PATH} (press '0' if you've noticed, that some of the folders dont exist)\n\n{Fore.WHITE}Or press '0' to leave to the main menu.\n\n>>> ")
+        
+        if tf_path == "0":
+            Escape()
+        else:
+            system("cls")
+            SoundRemover()
 
 # leaves...
 def Escape(leave : bool = False) -> None:
