@@ -68,7 +68,7 @@ def ConfigChanger() -> None:
         
             file.close()
 
-        Banner(Fore.GREEN, "Success!", "The \"exp gained\" sound is back!")
+        Banner(Fore.GREEN, "Success!", "The \"exp gained\" sound's gone!")
         Escape()
 
     else:
